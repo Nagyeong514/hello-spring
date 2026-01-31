@@ -1,4 +1,5 @@
-## 🌱 Spring Framework 학습 기록
+## 📝Spring Framework 학습 기록
+> 김영한의 스프링 입문 강의를 수강하며 학습 내용을 기록하는 공간입니다.
 
 Spring의 핵심 원리부터 데이터 접근 기술, 그리고 안정적인 테스트 코드 작성까지 단계별로 학습한 내용을 정리했습니다.
 
@@ -32,3 +33,12 @@ Spring의 핵심 원리부터 데이터 접근 기술, 그리고 안정적인 �
 ### 5. Spring Boot 실무 활용
 * **어노테이션 기반 개발**: 다양한 핵심 어노테이션의 용도를 익히고 적재적소에 적용
 * **Starter 프로젝트**: 프로젝트 의존성 관리 및 내장 서버를 활용한 빠른 실행 환경 구축
+* **공식 문서 활용**: [Spring Boot 3.5 Manual](https://docs.spring.io/spring-boot/3.5/index.html)에서 필요한 기능(예: `welcome page`)을 검색하여 적용하는 방법 습득
+* **H2 데이터베이스 연결**:
+  * 실행: `./h2.bat` (Windows 기준)
+  * JDBC URL: `jdbc:h2:tcp://localhost/~/test` 설정을 통한 네트워크 모드 접속
+* **로컬 서버 확인**: `localhost:8080`을 통한 실시간 개발 서버 구동 및 결과 검증
+
+* ## 📊 Quick Links
+- **강의 정보**: [스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술](https://inf.run/2t7Gr)
+- **학습 환경**: IntelliJ IDEA / Java 21
