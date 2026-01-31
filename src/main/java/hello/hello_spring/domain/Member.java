@@ -1,6 +1,16 @@
 package hello.hello_spring.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+//jpa가 관리하는 엔티티다~
+@Entity
+
 public class Member {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
     private String name;
