@@ -1,4 +1,4 @@
-# spring-start
+# spring-core
 ## 📝Spring Framework 학습 기록
 
 ### 섹션 4. AppConfig
