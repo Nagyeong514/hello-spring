@@ -1,33 +1,25 @@
-<<<<<<< HEAD
-# spring-basic
+# spring-core
 ## 📝Spring Framework 학습 기록
 > 김영한의 스프링 핵심원리 - 기본편을 수강하며 학습 내용을 기록하는 공간입니다.
 Spring의 핵심 원리부터 데이터 접근 기술, 그리고 안정적인 테스트 코드 작성까지 단계별로 학습한 내용을 정리했습니다.
 
 
-
-* ## 📊 Quick Links
-- **강의 정보**: [스프링 핵심 원리 - 기본편](https://inf.run/T8Vi4)
-=======
-# spring-core
-## 📝Spring Framework 학습 기록
-
 ### 섹션 4. AppConfig
 > TIL: 객체지향 설계 원칙과 관심사의 분리 (DIP & DI)
 
-### 1. 역할과 구현의 분리 (다형성)
+#### 1. 역할과 구현의 분리 (다형성)
 자바에서 **인터페이스(Interface)**는 '역할'이고, **클래스(Class)**는 그 역할을 수행하는 '배우'입니다.
 * **구조:** `MemberRepository memberRepository = new MemoryMemberRepository();`
 * **의도:** 왼쪽(인터페이스)은 배역을 정의하고, 오른쪽(구현체)은 실제 출연할 배우를 결정합니다.
 * **장점:** 나중에 구현체를 갈아끼워도 인터페이스를 사용하는 코드에는 영향이 없습니다.
 
-### 2. 데이터 객체 vs 기능 객체
+#### 2. 데이터 객체 vs 기능 객체
 * **데이터 객체 (예: `Member`)**: 이름, ID 등 정보를 담는 바구니입니다. 주로 `new Member(...)`와 같이 직접 클래스를 생성합니다.
 * **기능 객체 (예: `MemberService`)**: 가입, 조회 등 로직을 수행하는 기계입니다. 인터페이스와 `Impl` 구현체 조합으로 구성합니다.
 
 ---
 
-### 3. DIP(의존관계 역전 원칙)와 관심사의 분리
+#### 3. DIP(의존관계 역전 원칙)와 관심사의 분리
 
 #### ❌ 문제점 (Before)
 서비스 클래스 내부에서 `new`를 사용해 구현체를 직접 선택하는 경우입니다.
@@ -35,7 +27,8 @@ Spring의 핵심 원리부터 데이터 접근 기술, 그리고 안정적인 �
 // 서비스(로미오 배우)가 상대 배우(줄리엣)를 직접 캐스팅하는 꼴
 private final MemberRepository memberRepository = new MemoryMemberRepository();
 
+````
+
 * ## 📊 Quick Links
-- **강의 정보**: [스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술](https://inf.run/2t7Gr)
->>>>>>> 490b68fa2509e1bb473201150dc8fb8edb5dc47d
+- **강의 정보**: [스프링 핵심 원리 - 기본편](https://inf.run/T8Vi4)
 - **학습 환경**: IntelliJ IDEA / Java 21
