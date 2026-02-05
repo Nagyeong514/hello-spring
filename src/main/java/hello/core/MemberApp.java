@@ -1,16 +1,20 @@
 package hello.core;
 
 import hello.core.member.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MemberApp {
 
     public static void main(String[] args) {
 
 
-//        MemberService memberService = new MemberServiceImpl();
-        //관심사 분리로 여기도 수정
-        AppConfig appConfig = new AppConfig();
-        MemberService memberService = appConfig.memberService();
+//        AppConfig appConfig = new AppConfig();
+//        MemberService memberService = appConfig.memberService();
+        //Spring 사용하자!
+        //스프링 컨테이너라고 생각하자, @Bean 같은거라고 ㅇㅇ
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
 
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
